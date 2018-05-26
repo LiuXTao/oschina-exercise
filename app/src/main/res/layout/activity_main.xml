@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.example.a14161.oschina.MainActivity">
+
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_refresh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <org.itheima.recycler.widget.ItheimaRecyclerView
+                android:id="@+id/recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+            <org.itheima.recycler.header.RecyclerViewHeader
+                android:id="@+id/recycler_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|top">
+
+                <com.itheima.loopviewpager.LoopViewPager
+                    android:id="@+id/lvp_pager"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    app:animStyle="accordion"
+                    app:animTime="1000"
+                    app:loopTime="5000">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:background="#55000000"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:padding="10dp">
+
+                        <com.itheima.loopviewpager.LoopTitleView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:maxLines="1"
+                            android:textColor="#FF0000"
+                            android:textSize="16sp" />
+
+                        <com.itheima.loopviewpager.LoopDotsView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            app:dotShape="oval"
+                            app:dotSize="10dp" />
+
+                    </LinearLayout>
+
+                </com.itheima.loopviewpager.LoopViewPager>
+            </org.itheima.recycler.header.RecyclerViewHeader>
+        </FrameLayout>
+
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+</LinearLayout>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingLeft="16dp"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal">
+        <com.itheima.roundedimageview.RoundedImageView
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:id="@+id/iv_avatar"
+            android:layout_gravity="center_vertical" 
+            app:riv_oval="true"
+            android:src="@mipmap/ic_launcher"/>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/tv_title_deteil"
+                android:text="我是一个标题"
+                android:textSize="18sp"
+
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/tv_pub_data_detail"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
+                android:text="发表于XXX"
+                android:textColor="#6a6a6a"
+                android:textSize="12sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+        <ImageView
+            android:id="@+id/_btn_comment"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_marginRight="10px"
+            android:contentDescription="开源中国"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/comment"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="16dp"
+            android:id="@+id/iv_best_answer"
+            android:contentDescription="开源中国"
+            android:scaleType="fitEnd"
+            android:src="@mipmap/comment"
+            android:visibility="gone" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/lay_refer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <com.itheima.oschina.FloorView>
+
+        </com.itheima.oschina.FloorView>
+
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>
